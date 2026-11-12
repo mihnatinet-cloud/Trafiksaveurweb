@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trafik Saveurs - نظام تسيير تجارة الحلويات</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="rtl">
+
+<div class="header">
+  <div class="header-left">
+    <h1>🍪 <span data-t="app_name">Trafik Saveurs</span></h1>
+    <div class="sub" data-t="app_sub">نظام تسيير تجارة الحلويات والبسكويت بالجملة</div>
+  </div>
+  <div class="header-right">
+    <div class="clock-container">
+      <svg class="clock-svg" width="55" height="55" viewBox="0 0 100 100">
+        <defs><radialGradient id="clockGrad"><stop offset="0%" stop-color="#fff8e0"/>
+          <stop offset="100%" stop-color="#f5e8cf"/></radialGradient></defs>
+        <circle cx="50" cy="50" r="46" fill="url(#clockGrad)" stroke="#FFC52E" stroke-width="3"/>
+        <circle cx="50" cy="50" r="42" fill="none" stroke="#E9A900" stroke-width="1" opacity="0.5"/>
+        <line id="hourHand" x1="50" y1="50" x2="50" y2="28" stroke="#3B1B12" stroke-width="4" stroke-linecap="round"/>
+        <line id="minHand" x1="50" y1="50" x2="50" y2="20" stroke="#E9A900" stroke-width="3" stroke-linecap="round"/>
+        <line id="secHand" x1="50" y1="55" x2="50" y2="18" stroke="#B33A32" stroke-width="1.5" stroke-linecap="round"/>
+        <circle cx="50" cy="50" r="3.5" fill="#3B1B12"/>
+        <circle cx="50" cy="50" r="1.5" fill="#FFC52E"/>
+      </svg>
+      <div>
+        <div class="clock-time" id="clockTime">--:--:--</div>
+        <div class="clock-date" id="clockDate">--</div>
+      </div>
+    </div>
+    <button class="lang-btn" onclick="toggleLang()">
+      <span id="langFlag">🇫🇷</span>
+      <span id="langLabel">Français</span>
+    </button>
+  </div>
+</div>
+
+<div class="nav" id="navBar"></div>
+<div class="content" id="content"></div>
+<div class="modal-bg" id="modalBg"><div class="modal" id="modalContent"></div></div>
+
+<script src="script.js"></script>
+</body>
+</html>
